@@ -1,3 +1,32 @@
 baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Kubernetes Fest Tokyo 2020"
+theme = "kubefest"
+
+enableEmoji = true
+languageCode = "ja"
+hasCJKLanguage = true
+
+disableKinds = ["taxonomyTerm"]
+
+[params]
+  date = "2020/06/13(土)"
+  venu = "Online"
+  registerURL = "https://k8sjp.connpass.com/event/176105/"
+  author = "Kubernetes Fest Tokyo 実行委員会"
+
+[[menu.main]]
+    url = ""
+    name = "Home"
+    weight = 100
+[[menu.main]]
+    url = "about"
+    name = "About"
+    weight = 200
+[[menu.main]]
+    url = "schedule"
+    name = "Schedule"
+    weight = 300
+[[menu.main]]
+    url = "sponsors"
+    name = "Sponsors"
+    weight = 400
