@@ -1,0 +1,48 @@
+<section id="sponsors" class="section-block">
+
+  {{ $gold := slice }}
+  {{ $silver := slice }}
+  {{ range where .Pages "Section" "sponsors" }}
+  {{ range .Pages.ByWeight }}
+      {{ if eq .Params.sponsorType "gold" }}{{ $gold = $gold | append . }}
+      {{ else if eq .Params.sponsorType "silver" }}{{ $silver = $silver | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  <div class="text">
+	  <h2>Sponsors</h2>
+    <h3>Gold</h3>
+    <ul class="sponsor-list">
+      {{ range $gold }}
+      <li class="sponsor-item sponsor-item-gold">
+        <a href="{{ .Params.link }}" class="sponsor-link">
+          <amp-img alt="{{ .Title }}"
+                   src="{{ .Params.logo }}"
+                   width="100"
+                   height="100"
+                   layout="responsive">
+          </amp-img>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+
+    <h3>Silver</h3>
+    <ul class="sponsor-list sponsor-item-silver">
+      {{ range $silver }}
+      <li class="sponsor-item">
+        <a href="{{ .Params.link }}" class="sponsor-link">
+          <amp-img alt="{{ .Title }}"
+                   src="{{ .Params.logo }}"
+                   width="100"
+                   height="100"
+                   layout="responsive">
+          </amp-img>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+
+</section>
