@@ -1,0 +1,9 @@
+<nav class="main-nav">
+  <ul class="main-nav-list">
+    {{ range .Site.Menus.main }}
+    <li class="main-nav-item">
+      <a href="/#{{ .URL }}" target="_blank">{{ .Name }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</nav>
