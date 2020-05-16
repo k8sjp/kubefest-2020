@@ -1,4 +1,4 @@
 ---
-title: "schedule"
+title: "sessions"
 weight: 100
 ---
