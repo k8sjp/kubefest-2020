@@ -26,13 +26,13 @@
 	  <h2 class="time-slot" style="grid-column: times; grid-row: time-1030;">10:30am</h2>
 	  
 	  <div class="session track-1" style="grid-column: track-1-start; grid-row: time-1030 / time-1105;">
-		  <h3 class="title">Open Policy Agent を使ってベスト・プラクティスをコード化しよう</h3>
-		  <span class="presenter">なまえ, 所属</span>
+      {{ .Scratch.Set "sessionID" "7" }}
+      {{ partial "session" . }}
 	  </div>
 	  
 	  <div class="session track-2" style="grid-column: track-2-start; grid-row: time-1030 / time-1105;">
-		  <h3 class="title">ヤフー/ゼットラボのステートフルアプリケーションへの挑戦</h3>
-		  <span class="presenter">なまえ, 所属</span>
+      {{ .Scratch.Set "sessionID" "1" }}
+      {{ partial "session" . }}
 	  </div>
 
     <h2 class="time-slot" style="grid-column: times; grid-row: time-1105;">11:05am</h2>
@@ -44,13 +44,13 @@
 	  <h2 class="time-slot" style="grid-column: times; grid-row: time-1120;">11:20am</h2>
 	  
 	  <div class="session track-1" style="grid-column: track-1-start; grid-row: time-1120 / time-1155;">
-		  <h3 class="title">Kubernetesクラスタのマルチテナンシーベストプラクティス</h3>
-		  <span class="presenter">なまえ, 所属</span>
+		  {{ .Scratch.Set "sessionID" "8" }}
+      {{ partial "session" . }}
 	  </div>
 
 	  <div class="session track-2" style="grid-column: track-2-start; grid-row: time-1120 / time-1155;">
-		  <h3 class="title">Container Storage Interface のすべて</h3>
-		  <span class="presenter">なまえ, 所属</span>
+		  {{ .Scratch.Set "sessionID" "3" }}
+      {{ partial "session" . }}
 	  </div>
 	  
 	  <h2 class="time-slot" style="grid-column: times; grid-row: time-1155;">11:55am</h2>
@@ -63,17 +63,14 @@
 	  
 	  <div class="session track-main" style="grid-column: track-1-start; grid-row: time-1210 / time-1240;">
 		  <h3 class="title">Sponser Lunch Session #1</h3>
-		  <span class="presenter">なまえ, 所属</span>
 	  </div>
 
 	  <div class="session track-main" style="grid-column: track-2-start; grid-row: time-1210 / time-1240;">
 		  <h3 class="title">Sponser Lunch Session #2</h3>
-		  <span class="presenter">なまえ, 所属</span>
 	  </div>
 
 	  <div class="session track-main" style="grid-column: track-3-start; grid-row: time-1210 / time-1240;">
 		  <h3 class="title">Sponser Lunch Session #3</h3>
-		  <span class="presenter">なまえ, 所属</span>
 	  </div>
 
 	  <h2 class="time-slot" style="grid-column: times; grid-row: time-1240;">12:40pm</h2>
@@ -86,17 +83,10 @@
 	  
 	  <div class="session track-main" style="grid-column: track-1-start; grid-row: time-1255 / time-1325;">
 		  <h3 class="title">Sponser Lunch Session #4</h3>
-		  <span class="presenter">なまえ, 所属</span>
 	  </div>
 
 	  <div class="session track-main" style="grid-column: track-2-start; grid-row: time-1255 / time-1325;">
 		  <h3 class="title">Sponser Lunch Session #5</h3>
-		  <span class="presenter">なまえ, 所属</span>
-	  </div>
-
-	  <div class="session track-main" style="grid-column: track-3-start; grid-row: time-1255 / time-1325;">
-		  <h3 class="title">Sponser Lunch Session #6</h3>
-		  <span class="presenter">なまえ, 所属</span>
 	  </div>
 
 	  <h2 class="time-slot" style="grid-column: times; grid-row: time-1325;">13:25pm</h2>
@@ -108,18 +98,18 @@
     <h2 class="time-slot" style="grid-column: times; grid-row: time-1340;">13:40pm</h2>
 
     <div class="session track-1" style="grid-column: track-1-start; grid-row: time-1340 / time-1415;">
-		  <h3 class="title">分散密ベクトル探索エンジン Vald の Helm Chart の作成と Operator SDK を用いた Helm ベースの Operator の開発</h3>
-		  <span class="presenter">なまえ, 所属</span>
+      {{ .Scratch.Set "sessionID" "2" }}
+      {{ partial "session" . }}
 	  </div>
 
 	  <div class="session track-2" style="grid-column: track-2-start; grid-row: time-1340 / time-1415;">
-		  <h3 class="title">負荷を予測して事前スケーリングする HPA の Custom Controller 実装</h3>
-		  <span class="presenter">なまえ, 所属</span>
+      {{ .Scratch.Set "sessionID" "10" }}
+      {{ partial "session" . }}
 	  </div>
 
 	  <div class="session track-3" style="grid-column: track-3-start; grid-row: time-1340 / time-1700;">
-		  <h3 class="title">Kubernetes Upstream Training</h3>
-		  <span class="presenter">なまえ, 所属</span>
+      {{ .Scratch.Set "sessionID" "4" }}
+      {{ partial "session" . }}
 	  </div>
 
     <h2 class="time-slot" style="grid-column: times; grid-row: time-1415;">14:15pm</h2>
@@ -131,13 +121,13 @@
     <h2 class="time-slot" style="grid-column: times; grid-row: time-1430;">14:30pm</h2>
 
     <div class="session track-1" style="grid-column: track-1-start; grid-row: time-1430 / time-1505;">
-		  <h3 class="title">Kubernetesトラブル原因特定容易化に向けたロギング強化機能</h3>
-		  <span class="presenter">なまえ, 所属</span>
+		  {{ .Scratch.Set "sessionID" "6" }}
+      {{ partial "session" . }}
 	  </div>
 
 	  <div class="session track-2" style="grid-column: track-2-start; grid-row: time-1430 / time-1505;">
-		  <h3 class="title">運用性向上のためのベアメタルサーバ制御機能の紹介</h3>
-		  <span class="presenter">なまえ, 所属</span>
+      {{ .Scratch.Set "sessionID" "9" }}
+      {{ partial "session" . }}
 	  </div>
 
     <h2 class="time-slot" style="grid-column: times; grid-row: time-1505;">15:05pm</h2>
@@ -149,13 +139,13 @@
     <h2 class="time-slot" style="grid-column: times; grid-row: time-1535;">15:35pm</h2>
 
     <div class="session track-1" style="grid-column: track-1-start; grid-row: time-1535 / time-1610;">
-		  <h3 class="title">Open Policy AgentとSpinnakerで実現するマイクロサービスの安全な継続的デリバリー</h3>
-		  <span class="presenter">なまえ, 所属</span>
+      {{ .Scratch.Set "sessionID" "5" }}
+      {{ partial "session" . }}
 	  </div>
 
 	  <div class="session track-2" style="grid-column: track-2-start; grid-row: time-1535 / time-1610;">
-		  <h3 class="title">The potential of Kubernetes as more than just an infrastructure to deploy.</h3>
-		  <span class="presenter">なまえ, 所属</span>
+      {{ .Scratch.Set "sessionID" "11" }}
+      {{ partial "session" . }}
 	  </div>
 
     <h2 class="time-slot" style="grid-column: times; grid-row: time-1610;">16:10pm</h2>
@@ -167,13 +157,13 @@
     <h2 class="time-slot" style="grid-column: times; grid-row: time-1625;">16:25pm</h2>
 
     <div class="session track-1" style="grid-column: track-1-start; grid-row: time-1625 / time-1700;">
-		  <h3 class="title">Open Policy AgentとSpinnakerで実現するマイクロサービスの安全な継続的デリバリー</h3>
-		  <span class="presenter">なまえ, 所属</span>
+      {{ .Scratch.Set "sessionID" "13" }}
+      {{ partial "session" . }}
 	  </div>
 
 	  <div class="session track-2" style="grid-column: track-2-start; grid-row: time-1625 / time-1700;">
-		  <h3 class="title">The potential of Kubernetes as more than just an infrastructure to deploy.</h3>
-		  <span class="presenter">なまえ, 所属</span>
+      {{ .Scratch.Set "sessionID" "12" }}
+      {{ partial "session" . }}
 	  </div>
 
     <h2 class="time-slot" style="grid-column: times; grid-row: time-1700;">17:00pm</h2>
