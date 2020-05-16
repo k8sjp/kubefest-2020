@@ -3,7 +3,7 @@
 {{ $speakers := slice }}
 {{ range $id := $session.Params.speakers }}
   {{ $speaker := $context.Site.GetPage (printf "/speakers/%s" $id) }}
-  {{ $speakers = $speakers | append $speaker.Params.name }}
+  {{ $speakers = $speakers | append (printf "%s（%s）"  $speaker.Params.name $speaker.Params.company) }}
 {{ end }}
 <h3 class="title">{{ $session.Title }}</h3>
 <span class="presenter">{{ delimit $speakers ", " }}</span>
