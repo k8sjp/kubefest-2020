@@ -13,6 +13,8 @@ disableKinds = ["taxonomyTerm"]
   venu = "Online"
   registerURL = "https://k8sjp.connpass.com/event/176105/"
   author = "Kubernetes Fest Tokyo 実行委員会"
+  twitterName = "kcd_tokyo"
+  description = "Kubernetes Fest Tokyo 2020 は Kubernetes を利用している人、これから導入したい人が新しいことを学んだり、ネットワーキングすることを狙いとして開催するワンデイのオンラインイベントです。"
 
 [[menu.main]]
     url = ""
