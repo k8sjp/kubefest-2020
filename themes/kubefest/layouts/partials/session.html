@@ -5,5 +5,7 @@
   {{ $speaker := $context.Site.GetPage (printf "/speakers/%s" $id) }}
   {{ $speakers = $speakers | append (printf "%s（%s）"  $speaker.Params.name $speaker.Params.company) }}
 {{ end }}
-<h3 class="title">{{ $session.Title }}</h3>
-<span class="presenter">{{ delimit $speakers ", " }}</span>
+<a class="schedule-to-session-link" href="{{ $context.Site.BaseURL }}sessions/{{ .Scratch.Get "sessionID" }}">
+  <h3 class="title">{{ $session.Title }}</h3>
+  <span class="presenter">{{ delimit $speakers ", " }}</span>
+</a>
