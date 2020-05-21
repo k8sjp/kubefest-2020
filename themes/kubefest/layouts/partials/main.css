@@ -219,16 +219,18 @@ h1, h2, h3, h4, h5, h6, h7, h8 {
 	  color: #555;
 }
 
-.session {
-	  padding: .62em;
-	  border-radius: 2px;
-}
-
-.schedule-to-session-link {
-    display: block;
+.wrap-schedule-item {
+    display: flex;
     position: relative;
     width: 100%;
     height: 100%;
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.schedule-to-session-link {
     color: var(--body);
     cursor: pointer;
 }
@@ -256,6 +258,11 @@ body {
 
 span {
 	  display: block;
+}
+
+.session {
+	  padding: .62em;
+	  border-radius: 2px;
 }
 
 .track-1 {
@@ -373,4 +380,24 @@ footer {
 
 .back-btn {
     margin-top: 1.2em;
+}
+
+.schedule-content {
+    flex: 1;
+}
+
+.schedule-tags {
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+.schedule-tag {
+    padding: 2px 4px;
+    margin-left: 5px;
+    font-size: 80%;
+    color: #fff;
+    background: rgba(98, 98, 98, .5);
+    border: solid 1px rgba(0,0,0,.2);
+    border-radius: 3px;
+    box-shadow: 0 1px 2px -2px rgba(0,0,0,.1);
 }

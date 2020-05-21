@@ -14,7 +14,14 @@
 	  <h2 class="time-slot" style="grid-column: times; grid-row: time-1000;">10:00am</h2>
 
 	  <div class="session track-1 track-main" style="grid-column: track-1-start / track-3-end; grid-row: time-1000 / time-1015;">
-		  <h3 class="title">Welcome To Kubernetes Fest Tokyo 2020!</h3>
+      <div class="wrap-schedule-item">
+        <div class="schedule-content">
+          <h3 class="title">Welcome To Kubernetes Fest Tokyo 2020!</h3>
+        </div>
+        <div class="schedule-tags">
+          <span class="schedule-tag schedule-tag-track">track1</span>
+        </div>
+      </div>
 	  </div>
 
     <h2 class="time-slot" style="grid-column: times; grid-row: time-1015;">10:15am</h2>
@@ -27,11 +34,13 @@
 	  
 	  <div class="session track-1" style="grid-column: track-1-start; grid-row: time-1030 / time-1105;">
       {{ .Scratch.Set "sessionID" "7" }}
+      {{ .Scratch.Set "track" "1" }}
       {{ partial "session" . }}
 	  </div>
 	  
 	  <div class="session track-2" style="grid-column: track-2-start; grid-row: time-1030 / time-1105;">
       {{ .Scratch.Set "sessionID" "1" }}
+      {{ .Scratch.Set "track" "2" }}
       {{ partial "session" . }}
 	  </div>
 
@@ -45,11 +54,13 @@
 	  
 	  <div class="session track-1" style="grid-column: track-1-start; grid-row: time-1120 / time-1155;">
 		  {{ .Scratch.Set "sessionID" "6" }}
+      {{ .Scratch.Set "track" "1" }}
       {{ partial "session" . }}
 	  </div>
 
 	  <div class="session track-2" style="grid-column: track-2-start; grid-row: time-1120 / time-1155;">
 		  {{ .Scratch.Set "sessionID" "3" }}
+      {{ .Scratch.Set "track" "2" }}
       {{ partial "session" . }}
 	  </div>
 	  
@@ -62,15 +73,19 @@
 	  <h2 class="time-slot" style="grid-column: times; grid-row: time-1210;">12:10pm</h2>
 	  
 	  <div class="session track-main" style="grid-column: track-1-start; grid-row: time-1210 / time-1240;">
-		  <h3 class="title">Sponser Lunch Session #1</h3>
+      {{ .Scratch.Set "sessionID" "14" }}
+      {{ .Scratch.Set "track" "1" }}
+      {{ partial "session" . }}
 	  </div>
 
 	  <div class="session track-main" style="grid-column: track-2-start; grid-row: time-1210 / time-1240;">
-		  <h3 class="title">Sponser Lunch Session #2</h3>
+      {{ .Scratch.Set "sessionID" "15" }}
+      {{ .Scratch.Set "track" "2" }}
+      {{ partial "session" . }}
 	  </div>
 
 	  <div class="session track-main" style="grid-column: track-3-start; grid-row: time-1210 / time-1240;">
-		  <h3 class="title">Sponser Lunch Session #3</h3>
+		  <h3 class="title">TBD</h3>
 	  </div>
 
 	  <h2 class="time-slot" style="grid-column: times; grid-row: time-1240;">12:40pm</h2>
@@ -82,11 +97,15 @@
 	  <h2 class="time-slot" style="grid-column: times; grid-row: time-1255;">12:55pm</h2>
 	  
 	  <div class="session track-main" style="grid-column: track-1-start; grid-row: time-1255 / time-1325;">
-		  <h3 class="title">Sponser Lunch Session #4</h3>
+      {{ .Scratch.Set "sessionID" "16" }}
+      {{ .Scratch.Set "track" "1" }}
+      {{ partial "session" . }}
 	  </div>
 
 	  <div class="session track-main" style="grid-column: track-2-start; grid-row: time-1255 / time-1325;">
-		  <h3 class="title">Sponser Lunch Session #5</h3>
+      {{ .Scratch.Set "sessionID" "17" }}
+      {{ .Scratch.Set "track" "2" }}
+      {{ partial "session" . }}
 	  </div>
 
 	  <h2 class="time-slot" style="grid-column: times; grid-row: time-1325;">13:25pm</h2>
@@ -99,16 +118,19 @@
 
     <div class="session track-1" style="grid-column: track-1-start; grid-row: time-1340 / time-1415;">
       {{ .Scratch.Set "sessionID" "2" }}
+      {{ .Scratch.Set "track" "1" }}
       {{ partial "session" . }}
 	  </div>
 
 	  <div class="session track-2" style="grid-column: track-2-start; grid-row: time-1340 / time-1415;">
       {{ .Scratch.Set "sessionID" "10" }}
+      {{ .Scratch.Set "track" "2" }}
       {{ partial "session" . }}
 	  </div>
 
 	  <div class="session track-3" style="grid-column: track-3-start; grid-row: time-1340 / time-1700;">
       {{ .Scratch.Set "sessionID" "4" }}
+      {{ .Scratch.Set "track" "3" }}
       {{ partial "session" . }}
 	  </div>
 
@@ -122,11 +144,13 @@
 
     <div class="session track-1" style="grid-column: track-1-start; grid-row: time-1430 / time-1505;">
 		  {{ .Scratch.Set "sessionID" "8" }}
+      {{ .Scratch.Set "track" "1" }}
       {{ partial "session" . }}
 	  </div>
 
 	  <div class="session track-2" style="grid-column: track-2-start; grid-row: time-1430 / time-1505;">
       {{ .Scratch.Set "sessionID" "9" }}
+      {{ .Scratch.Set "track" "2" }}
       {{ partial "session" . }}
 	  </div>
 
@@ -140,11 +164,13 @@
 
     <div class="session track-1" style="grid-column: track-1-start; grid-row: time-1535 / time-1610;">
       {{ .Scratch.Set "sessionID" "5" }}
+      {{ .Scratch.Set "track" "1" }}
       {{ partial "session" . }}
 	  </div>
 
 	  <div class="session track-2" style="grid-column: track-2-start; grid-row: time-1535 / time-1610;">
       {{ .Scratch.Set "sessionID" "11" }}
+      {{ .Scratch.Set "track" "2" }}
       {{ partial "session" . }}
 	  </div>
 
@@ -158,20 +184,31 @@
 
     <div class="session track-1" style="grid-column: track-1-start; grid-row: time-1625 / time-1700;">
       {{ .Scratch.Set "sessionID" "13" }}
+      {{ .Scratch.Set "track" "1" }}
       {{ partial "session" . }}
 	  </div>
 
 	  <div class="session track-2" style="grid-column: track-2-start; grid-row: time-1625 / time-1700;">
       {{ .Scratch.Set "sessionID" "12" }}
+      {{ .Scratch.Set "track" "2" }}
       {{ partial "session" . }}
 	  </div>
 
     <h2 class="time-slot" style="grid-column: times; grid-row: time-1700;">17:00pm</h2>
 
 	  <div class="session track-1 track-main" style="grid-column: track-1-start / track-3-end; grid-row: time-1700 / time-1800;">
-		  <h3 class="title">LT大会</h3>
+		  
+      <div class="wrap-schedule-item">
+        <div class="schedule-content">
+          <h3 class="title">LT大会</h3>
+        </div>
+        <div class="schedule-tags">
+          <span class="schedule-tag schedule-tag-track">track1</span>
+        </div>
+      </div>
+
 	  </div>
-	  
+
   </div>
 
 </section>
