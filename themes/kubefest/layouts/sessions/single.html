@@ -1,0 +1,42 @@
+{{ partial "head" . }}
+{{ partial "nav" . }}
+
+<main class="session text">
+
+  <h1>{{.Title}}</h1>
+
+  <div class="session-tags">
+    <span class="tag tag-lang">{{.Params.lang|title}}</span>
+    <span class="tag tag-format">{{.Params.format|title}} Session</span></span>
+    <span class="tag tag-time">{{ if eq .Params.format "lt" }}5m{{else if eq .Params.format "training"}}{{else}}35m{{end}}</span>
+  </div>
+
+  <h2>概要</h2>
+  <article class="session-abstract">
+    {{.Content}}
+  </article>
+
+  <h2>登壇者</h2>
+  <ul class="session-speaker-list">
+  {{ $context := . }}
+  {{ range $id := .Params.speakers }}
+  {{ $speaker := $context.Site.GetPage (printf "/speakers/%s" $id) }}
+  <li class="session-speaker-item card">
+    <h3 class="speaker-name">{{ $speaker.Params.name }}</h3>
+    <span class="speaker-elm speaker-company">{{ $speaker.Params.company }}</span>
+    {{ if $speaker.Params.role }}
+    <span class="speaker-elm speaker-role">{{ $speaker.Params.role }}</span>
+    {{ end }}
+    {{ if $speaker.Params.twitter }}
+    <span class="speaker-elm speaker-twitter">
+      <a href="https://twitter.com/{{ $speaker.Params.twitter }}">@{{ $speaker.Params.twitter }}</a>
+    </span>
+    {{ end }}
+    <p class="speaker-bio">{{ $speaker.Content }}</p>
+  </li>
+  {{ end }}
+  </ul>
+  <p class="back-btn">
+    <a href="{{ .Site.BaseURL }}#schedule">← 戻る</a>
+  </p>
+</main>
