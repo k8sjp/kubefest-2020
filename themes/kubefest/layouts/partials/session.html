@@ -5,7 +5,18 @@
   {{ $speaker := $context.Site.GetPage (printf "/speakers/%s" $id) }}
   {{ $speakers = $speakers | append (printf "%s（%s）"  $speaker.Params.name $speaker.Params.company) }}
 {{ end }}
-<a class="schedule-to-session-link" href="{{ $context.Site.BaseURL }}sessions/{{ .Scratch.Get "sessionID" }}">
-  <h3 class="title">{{ $session.Title }}</h3>
-  <span class="presenter">{{ delimit $speakers ", " }}</span>
-</a>
+<div class="wrap-schedule-item">
+  <div class="schedule-content">
+    <a class="schedule-to-session-link" href="{{ $context.Site.BaseURL }}sessions/{{ .Scratch.Get "sessionID" }}">
+      {{ if eq $session.Params.format "sponsor" }}
+      <h3 class="title sponsor-title">{{ $session.Title }}</h3>
+      {{else}}
+      <h3 class="title">{{ $session.Title }}</h3>
+      {{end}}
+      <span class="presenter">{{ delimit $speakers ", " }}</span>
+    </a>
+  </div>
+  <div class="schedule-tags">
+    <span class="schedule-tag schedule-tag-track">track{{ .Scratch.Get "track" }}</span>
+  </div>
+</div>
