@@ -1,4 +1,4 @@
-# Kubernetes Fest Tokyo 2020 Website
+# KubeFest Tokyo 2020 Website
 
 ## Check website on local machine
 

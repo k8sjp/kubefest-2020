@@ -1,5 +1,5 @@
 baseURL = "https://k8sjp.github.io/kubefest-2020/"
-title = "Kubernetes Fest Tokyo 2020"
+title = "KubeFest Tokyo 2020"
 theme = "kubefest"
 
 enableEmoji = true
@@ -12,9 +12,9 @@ disableKinds = ["taxonomyTerm"]
   date = "2020/06/13(土)"
   venu = "Online"
   registerURL = "https://k8sjp.connpass.com/event/176105/"
-  author = "Kubernetes Fest Tokyo 実行委員会"
+  author = "KubeFest Tokyo 実行委員会"
   twitterName = "kcd_tokyo"
-  description = "Kubernetes Fest Tokyo 2020 は Kubernetes を利用している人、これから導入したい人が新しいことを学んだり、ネットワーキングすることを狙いとして開催するワンデイのオンラインイベントです。"
+  description = "KubeFest Tokyo 2020 は Kubernetes を利用している人、これから導入したい人が新しいことを学んだり、ネットワーキングすることを狙いとして開催するワンデイのオンラインイベントです。"
 
 [[menu.main]]
     url = ""

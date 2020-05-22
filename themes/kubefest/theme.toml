@@ -1,7 +1,7 @@
 name = "Kubefest"
 license = "Apache License 2.0"
 licenselink = "https://github.com/k8sjp/kubefest-2020/blob/master/LICENSE"
-description = "Conference Website for Kubernetes Fest Tokyo 2020"
+description = "Conference Website for KubeFest Tokyo 2020"
 homepage = "https://k8sjp.connpass.com/event/176105/"
 tags = []
 features = []
