@@ -9,7 +9,7 @@
   <div class="schedule-content">
     <a class="schedule-to-session-link" href="{{ $context.Site.BaseURL }}sessions/{{ .Scratch.Get "sessionID" }}">
       {{ if eq $session.Params.format "sponsor" }}
-      <h3 class="title sponsor-title">{{ $session.Title }}</h3>
+      <h3 class="title sponsor-title">[Sponsored] {{ $session.Title }}</h3>
       {{ else if eq $session.Params.format "lt" }}
       <h3 class="title">[LT] {{ $session.Title }}</h3>
       {{else}}
