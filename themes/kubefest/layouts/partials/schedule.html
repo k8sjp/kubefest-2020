@@ -85,7 +85,9 @@
 	  </div>
 
 	  <div class="session track-main" style="grid-column: track-3-start; grid-row: time-1210 / time-1240;">
-		  <h3 class="title">TBD</h3>
+      {{ .Scratch.Set "sessionID" "27" }}
+      {{ .Scratch.Set "track" "3" }}
+      {{ partial "session" . }}
 	  </div>
 
 	  <h2 class="time-slot" style="grid-column: times; grid-row: time-1240;">12:40pm</h2>
