@@ -36,6 +36,18 @@
   </li>
   {{ end }}
   </ul>
+
+  {{ if (or (eq .Params.format "solo") (eq .Params.format "dual") (eq .Params.format "sponsor")) }}
+  <h2 class="question-title">質問</h2>
+  <script src="https://utteranc.es/client.js"
+        repo="k8sjp/kubefest-2020"
+        issue-term="title"
+        label="💬"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+  </script>
+  {{ end }}
   <p class="back-btn">
     <a href="{{ .Site.BaseURL }}#schedule">← 戻る</a>
   </p>
