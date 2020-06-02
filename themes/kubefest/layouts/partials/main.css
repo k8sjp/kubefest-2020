@@ -389,7 +389,7 @@ footer {
 }
 
 .back-btn {
-    margin-top: 1.2em;
+    margin-top: 1.5em;
 }
 
 .schedule-content {
@@ -414,4 +414,9 @@ footer {
 
 .session-wrap {
     padding: .4rem 1.5rem;
+}
+
+.question-title {
+    margin-top: 1.5em;
+    margin-bottom: 0;
 }
