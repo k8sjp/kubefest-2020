@@ -15,6 +15,20 @@ disableKinds = ["taxonomyTerm"]
   author = "KubeFest Tokyo 実行委員会"
   twitterName = "kcd_tokyo"
   description = "KubeFest Tokyo 2020 は Kubernetes を利用している人、これから導入したい人が新しいことを学んだり、ネットワーキングすることを狙いとして開催するワンデイのオンラインイベントです。"
+  hashtag = "k8sjp"
+
+[[params.tracks]]
+  name = "Track1"
+  youtube = "https://youtu.be/F-5TU7B40cA"
+  hashtag = "k8sjp_t1"
+[[params.tracks]]
+  name = "Track2"
+  youtube = "https://youtu.be/Tjdj7HuCUHA"
+  hashtag = "k8sjp_t2"
+[[params.tracks]]
+  name = "Track3"
+  youtube = "https://youtu.be/Tjdj7HuCUHA"
+  hashtag = "k8sjp_t3"
 
 [[menu.main]]
     url = ""

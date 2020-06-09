@@ -2,7 +2,19 @@
 
   <div class="text">
 	  <h2>Event Schedule</h2>
-    <p>TrackごとにYouTube Liveで配信します</p>
+    <p>TrackごとにYouTube Liveで配信します。また、質問は各セッションページの質問フォームから受け付けています。(質問にはGitHubのアカウントが必要です)</p>
+    <h3>配信URL</h3>
+    <ul>
+    {{ $hashtag := .Site.Params.hashtag }}
+    {{ range $track := .Site.Params.tracks }}
+    <li>
+      <b>{{ $track.name }}:</b>
+      <a href="{{ $track.youtube }}">{{ $track.youtube }}</a>
+      (<a href="https://twitter.com/intent/tweet?button_hashtag={{ $track.hashtag }}" class="twitter-hashtag-button" data-hashtags="{{ $hashtag }}">Tweet #{{ $track.hashtag }}</a>)
+    </li>
+    {{ end }}
+    </ul>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
 
   <div class="schedule">
