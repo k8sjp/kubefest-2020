@@ -8,6 +8,9 @@
   <div class="session-tags">
     <span class="tag tag-lang">{{.Params.lang|title}}</span>
     <span class="tag tag-format">{{.Params.format|title}} Session</span></span>
+    {{ if .Date }}
+    <span class="tag tag-date">{{ .Date.Local.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</span>
+    {{ end }}
     <span class="tag tag-time">{{ if eq .Params.format "lt" }}5m{{else if eq .Params.format "training"}}{{else if eq .Params.format "sponsor"}}30m{{else}}35m{{end}}</span>
   </div>
 

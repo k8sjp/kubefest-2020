@@ -3,7 +3,7 @@
 ## Check website on local machine
 
 ```bash
-$ hugo server
+$ hugo server -F
 ```
 
 ## How to add conference info?
